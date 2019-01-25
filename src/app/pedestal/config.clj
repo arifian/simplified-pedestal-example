@@ -51,6 +51,6 @@
                           (http.sh/content-security-policy-header "object-src 'none';")}})
 
 (defn pedestal-config-fn
-  "Builds whole shebang in to useable components."
+  "Builds+verify whole shebang so it would be useable as a pedestal component (->Pedestal)."
   [config]
   (http/default-interceptors (pedestal-config config)))
