@@ -1,0 +1,15 @@
+{:cljs-config {:path "/home/arifian"}
+ :pedestal    {:port          6969
+               :host          "0.0.0.0"
+               :http-type     :jetty
+               :join?         false
+               :resource-path "public"
+               :csrf          false}
+ :cookie      {:cookie-name  "raiser-cookies"
+               :cookie-key   "KeF5ne2TLMga2axb"
+               :cookie-attrs {:max-age 2592000
+                              :secure  true}}
+ :datomic     {:uri      "datomic:mem://webtemp"
+               :part     :db.part/app
+               :migrator "src/app/db/datomic/migrators"
+               :seed     "app.db.datomic.seeds/run"}}
